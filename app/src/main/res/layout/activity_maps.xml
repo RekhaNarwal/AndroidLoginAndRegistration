@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity" >
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:id="@+id/map"
+        tools:context="com.socialpresencenetwork.phodo.MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        tools:layout="@layout/activity_maps" />
+
+    <LinearLayout
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="@drawable/map_nav_back_for_splash"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="18dp">
+        <!-- Profile button -->
+        <Button android:id="@+id/btnProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/profile_button"
+            android:onClick="getLinearProfilePage"/>
+        <!-- Post button -->
+        <Button android:id="@+id/btnPost"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/post_button_a"
+            android:onClick="getLinearPostPage" />
+        <!-- Place button -->
+        <Button android:id="@+id/btnplace"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/places_button"
+            android:onClick="getLinearPlacePage" />
+        <!-- Friends button -->
+        <Button android:id="@+id/btnFriends"
+            android:layout_width="63dp"
+            android:layout_height="match_parent"
+            android:onClick="getLinearFriendsPage"
+            android:background="@drawable/friends_button" />
+        <!-- Settings button -->
+        <Button android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="getLinearSettingsPage"
+            android:background="@drawable/settings_icon" />
+    </LinearLayout>
+</FrameLayout>
