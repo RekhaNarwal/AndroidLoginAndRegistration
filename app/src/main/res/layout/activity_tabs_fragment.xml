@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:id="@+id/ll_tabs"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="3">
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Friends"
+        android:layout_weight="1"
+        android:background="@drawable/selected_button"
+        android:textColor="#ffffff"
+        android:id="@+id/bt_friends" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_weight="1"
+        android:background="@drawable/selected_button"
+        android:textColor="#ffffff"
+        android:id="@+id/bt_search" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Request"
+        android:background="@drawable/selected_button"
+        android:textColor="#ffffff"
+        android:id="@+id/bt_request"
+        android:layout_weight="1"/>
+</LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_tabs"
+        android:id="@+id/pager">
+
+        </android.support.v4.view.ViewPager>
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.socialpresencenetwork.phodo.RequestFragment">
+
+    <!-- Request Form -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <!--  Name Label -->
+        <EditText android:id="@+id/reg_name"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/login_text_back_a"
+            android:gravity="center"
+            android:hint="Enter Your Name"
+            android:singleLine="true"/>
+        <!-- Last Full Name Label -->
+
+        <EditText android:id="@+id/reg_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/login_text_back_a"
+            android:gravity="center"
+            android:hint="Your Last Name"
+            android:singleLine="true"/>
+        <!-- email Label -->
+        <EditText android:id="@+id/reg_email"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/login_text_back_a"
+            android:gravity="center"
+            android:hint="Enter Your Email"
+            android:singleLine="true"/>
+        <!-- Message Label -->
+        <EditText android:id="@+id/reg_rep_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/login_text_back_a"
+            android:gravity="center"
+            android:hint="Enter Your Message"
+            android:inputType="textMultiLine"
+            />
+        <!-- Register Button -->
+        <Button android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:background="@drawable/login_button_a"
+            android:layout_height="50dp"
+            android:layout_marginTop="60dp"
+            android:textColor="#ffffff"
+            android:text="Request"/>
+        <!-- Link to Request Screen -->
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_above="@id/btnRegister"
-        android:weightSum="10">
+        android:weightSum="10" >
 
         <ImageButton android:id="@+id/btnFacebookLogin"
             android:background="@drawable/fb_login_button_b"
@@ -84,6 +84,7 @@
             android:layout_marginLeft="20dp"
             android:text="Sign Up"/>
 
+        
         <ImageButton android:id="@+id/btnTwitterLogin"
             android:background="@drawable/twitter_login_button_a"
             android:layout_height="50dp"

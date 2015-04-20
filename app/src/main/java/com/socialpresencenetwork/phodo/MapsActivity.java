@@ -82,7 +82,7 @@ public class MapsActivity extends FragmentActivity {
     }
     /******* Friends Activity *********/
     public void getLinearFriendsPage (View view) {
-        Intent intent = new Intent(getApplicationContext(), FriendsActivity.class);
+        Intent intent = new Intent(getApplicationContext(), TabsFragmentActivity.class);
         startActivity(intent);
     }
     /******* Settings Activity *********/

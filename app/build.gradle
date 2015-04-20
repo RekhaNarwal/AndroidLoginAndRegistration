@@ -26,4 +26,6 @@ dependencies {
     compile 'com.google.android.gms:play-services:7.0.0'
     compile 'com.google.android.gms:play-services-fitness:7.0.0'
     compile 'com.google.android.gms:play-services-wearable:7.0.0'
+	compile project(':libraries:facebook')
+    compile 'de.hdodenhof:circleimageview:1.2.2'
 }

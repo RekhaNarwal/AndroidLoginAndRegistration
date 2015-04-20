@@ -10,4 +10,7 @@
     <string name="title_activity_place">PlaceActivity</string>
     <string name="title_activity_friends">FriendsActivity</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_tabs_fragment">TabsFragmentActivity</string>
+    <string name="title_activity_search_fragment">SearchFragment</string>
+    <string name="title_activity_request_fragment">RequestFragment</string>
 </resources>
