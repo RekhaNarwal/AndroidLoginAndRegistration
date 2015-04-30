@@ -14,7 +14,8 @@
         <ImageView android:src="@drawable/logo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dip"/>
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"/>
         <!-- Logo Ends -->
     </LinearLayout>
     <!--  Header Ends -->
@@ -35,12 +36,16 @@
             android:background="@drawable/login_text_back_a"
             android:gravity="center"
             android:hint="Email"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
             android:singleLine="true"/>
 		<!-- Full Name Label -->
 
         <EditText android:id="@+id/reg_fullname"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
             android:background="@drawable/login_text_back_a"
             android:gravity="center"
             android:hint="User Name"
@@ -49,13 +54,17 @@
         <EditText android:id="@+id/reg_password"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
             android:background="@drawable/login_text_back_a"
             android:gravity="center"
             android:hint="Password"
             android:singleLine="true"/>
-        <EditText android:id="@+id/reg_rep_password"
+        <EditText android:id="@+id/reg_password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
             android:background="@drawable/login_text_back_a"
             android:gravity="center"
             android:hint="Password Again"
@@ -65,7 +74,9 @@
             android:layout_width="match_parent"
             android:background="@drawable/login_button_a"
             android:layout_height="50dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
             android:textColor="#ffffff"
             android:text="Sign Up"/>
         <!-- Link to Login Screen -->

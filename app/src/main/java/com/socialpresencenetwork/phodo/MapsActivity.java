@@ -16,6 +16,7 @@ import android.view.View;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -71,7 +72,9 @@ public class MapsActivity extends FragmentActivity {
 
         setUpMapIfNeeded();
 
-        getLocation();
+        try {
+            getLocation();
+        } catch (Exception e){}
     }
 
     @Override
@@ -87,7 +90,7 @@ public class MapsActivity extends FragmentActivity {
         Criteria criteria = new Criteria();
         String bestProvider = locationManager.getBestProvider(criteria, false);
         Location location = locationManager.getLastKnownLocation(bestProvider);
-        Geocoder gcd = new Geocoder(getApplicationContext(), Locale.getDefault());
+        // Geocoder gcd = new Geocoder(getApplicationContext(), Locale.getDefault());
         List<Address> addresses = null;
 
         LatLng mapLoc = new LatLng(location.getLatitude(), location.getLongitude());
@@ -129,8 +132,59 @@ public class MapsActivity extends FragmentActivity {
      * <p/>
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
+    private void showCurrentLocation(Location location){
+
+        mMap.clear();
+
+        LatLng currentPosition = new LatLng(location.getLatitude(),location.getLongitude());
+
+        mMap.addMarker(new MarkerOptions()
+                .position(currentPosition)
+                .snippet("Lat: " + location.getLatitude() + ", Lng: " + location.getLongitude())
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.post_pin_c))
+                .flat(true)
+                .title("I'm here!"));
+
+        // Zoom in, animating the camera.
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentPosition, 18));
+    }
     private void setUpMap() {
-        //mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+
+        LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+
+        Criteria criteria = new Criteria();
+        criteria.setAccuracy(Criteria.ACCURACY_FINE);
+
+        String provider = locationManager.getBestProvider(criteria, true);
+
+        LocationListener locationListener = new LocationListener() {
+
+            @Override
+            public void onLocationChanged(Location location) {
+                showCurrentLocation(location);
+            }
+
+            @Override
+            public void onStatusChanged(String s, int i, Bundle bundle) {
+            }
+
+            @Override
+            public void onProviderEnabled(String s) {
+            }
+
+            @Override
+            public void onProviderDisabled(String s) {
+            }
+        };
+
+        locationManager.requestLocationUpdates(provider, 2000, 0, locationListener);
+
+        // Getting initial Location
+        Location location = locationManager.getLastKnownLocation(provider);
+        // Show the initial location
+        if (location != null) {
+            showCurrentLocation(location);
+        }
     }
 
     /******* profile Activity *********/
@@ -138,11 +192,11 @@ public class MapsActivity extends FragmentActivity {
         Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
         startActivity(intent);
     }
-     /******* Post Activity *********/
-     public void getLinearPostPage (View view) {
-         Intent intent = new Intent(getApplicationContext(), PostActivity.class);
-         startActivity(intent);
-     }
+    /******* Post Activity *********/
+    public void getLinearPostPage (View view) {
+        Intent intent = new Intent(getApplicationContext(), PostActivity.class);
+        startActivity(intent);
+    }
     /******* Place Activity *********/
     public void getLinearPlacePage (View view) {
         Intent intent = new Intent(getApplicationContext(), PlaceActivity.class);

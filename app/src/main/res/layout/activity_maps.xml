@@ -10,42 +10,56 @@
         tools:context="com.socialpresencenetwork.phodo.MapsActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         tools:layout="@layout/activity_maps" />
+    <fragment
+        android:id="@+id/markers_map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <LinearLayout
         android:layout_height="@dimen/abc_action_bar_default_height_material"
-        android:background="@drawable/map_nav_back_for_splash"
+        android:background="@drawable/map_nav"
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:layout_marginTop="18dp">
-        <!-- Profile button -->
-        <Button android:id="@+id/btnProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/profile_button"
-            android:onClick="getLinearProfilePage"/>
+        android:weightSum="5"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
         <!-- Post button -->
         <Button android:id="@+id/btnPost"
-            android:layout_width="60dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="@drawable/post_button_a"
             android:onClick="getLinearPostPage" />
         <!-- Place button -->
         <Button android:id="@+id/btnplace"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="@drawable/places_button"
             android:onClick="getLinearPlacePage" />
         <!-- Friends button -->
         <Button android:id="@+id/btnFriends"
-            android:layout_width="63dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:onClick="getLinearFriendsPage"
             android:background="@drawable/friends_button" />
         <!-- Settings button -->
         <Button android:id="@+id/btnSettings"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:onClick="getLinearSettingsPage"
-            android:background="@drawable/settings_icon" />
+            android:background="@drawable/settings_button" />
+        <!-- Profile button -->
+        <Button android:id="@+id/btnProfile"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/profile_button"
+            android:onClick="getLinearProfilePage"/>
     </LinearLayout>
 </FrameLayout>
