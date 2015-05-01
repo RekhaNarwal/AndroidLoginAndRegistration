@@ -2,11 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context="com.socialpresencenetwork.phodo.SearchFragment">
 
     <SearchView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="15dip"
         android:id="@+id/searchView"
          />
 
