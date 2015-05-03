@@ -35,20 +35,20 @@ Context ctx=this;
 switch (v.getId()){
     case R.id.bt_friends:
         pager.setCurrentItem(0);
-        search_Bt.setBackgroundResource(R.drawable.fakeuser1);
+        search_Bt.setBackgroundResource(R.drawable.nonselected_button_2x);
         friends_Bt.setBackgroundResource(R.drawable.button_selector);
-        request_Bt.setBackgroundResource(R.drawable.fakeuser1);
+        request_Bt.setBackgroundResource(R.drawable.nonselected_button_2x);
         break;
     case R.id.bt_search:
         pager.setCurrentItem(1);
         search_Bt.setBackgroundResource(R.drawable.button_selector);
-        friends_Bt.setBackgroundResource(R.drawable.fakeuser1);
-        request_Bt.setBackgroundResource(R.drawable.fakeuser1);
+        friends_Bt.setBackgroundResource(R.drawable.nonselected_button_2x);
+        request_Bt.setBackgroundResource(R.drawable.nonselected_button_2x);
         break;
     case R.id.bt_request:
         pager.setCurrentItem(2);
-        search_Bt.setBackgroundResource(R.drawable.fakeuser1);
-        friends_Bt.setBackgroundResource(R.drawable.fakeuser1);
+        search_Bt.setBackgroundResource(R.drawable.nonselected_button_2x);
+        friends_Bt.setBackgroundResource(R.drawable.nonselected_button_2x);
         request_Bt.setBackgroundResource(R.drawable.button_selector);
         break;
 }
