@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="Friends"
         android:layout_weight="1"
-        android:background="@drawable/selected_button"
+        android:background="@drawable/button_selector"
         android:textColor="#ffffff"
         android:id="@+id/bt_friends" />
 
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="Search"
         android:layout_weight="1"
-        android:background="@drawable/selected_button"
+        android:background="@drawable/button_selector"
         android:textColor="#ffffff"
         android:id="@+id/bt_search" />
 
@@ -32,7 +32,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Request"
-        android:background="@drawable/selected_button"
+        android:background="@drawable/button_selector"
         android:textColor="#ffffff"
         android:id="@+id/bt_request"
         android:layout_weight="1"/>

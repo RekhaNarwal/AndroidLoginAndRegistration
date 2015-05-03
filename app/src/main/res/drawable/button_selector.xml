@@ -9,5 +9,6 @@
 <item android:state_focused="false"
     android:state_pressed="true"
     android:drawable="@drawable/selected_button_2x" />
-<item android:drawable="@drawable/fakeuser1" />
+<item android:drawable="@drawable/selected_button_2x" />
 </selector>
+
