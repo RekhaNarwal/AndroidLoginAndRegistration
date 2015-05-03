@@ -10,11 +10,11 @@
         tools:context="com.socialpresencenetwork.phodo.MapsActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         tools:layout="@layout/activity_maps" />
-    <fragment
-        android:id="@+id/markers_map"
-        android:name="com.google.android.gms.maps.MapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <!--<fragment-->
+        <!--android:id="@+id/markers_map"-->
+        <!--android:name="com.google.android.gms.maps.MapFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
 
     <LinearLayout
         android:layout_height="@dimen/abc_action_bar_default_height_material"
