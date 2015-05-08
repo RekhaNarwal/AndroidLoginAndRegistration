@@ -9,7 +9,7 @@ import android.widget.Button;
 
 
 public class TabsFragmentActivity extends FragmentActivity implements View.OnClickListener {
-Context ctx=this;
+Context ctxx=this;
    Button search_Bt;
    Button friends_Bt;
    Button request_Bt;
@@ -20,7 +20,7 @@ Context ctx=this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs_fragment);
        pager =(ViewPager)findViewById(R.id.pager);
-         search_Bt= (Button)findViewById(R.id.bt_search);
+        search_Bt= (Button)findViewById(R.id.bt_search);
         search_Bt.setOnClickListener(this);
         friends_Bt= (Button)findViewById(R.id.bt_friends);
         friends_Bt.setOnClickListener(this);
