@@ -13,8 +13,6 @@ import android.widget.Button;
 
 public class ProfileActivity extends FragmentActivity implements View.OnClickListener {
 
-
-
     Context ctx=this;
     Button likes_Bt;
     Button posts_info_Bt;
