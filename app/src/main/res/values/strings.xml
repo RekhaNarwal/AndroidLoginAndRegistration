@@ -18,4 +18,5 @@
     <string name="title_activity_comments_info">CommentsInfoActivity</string>
     <string name="title_activity_ranks">RanksActivity</string>
     <string name="title_activity_tabs_profile_fragment">TabsProfileFragmentActivity</string>
+    <string name="title_activity_recent_posts">RecentPosts</string>
 </resources>

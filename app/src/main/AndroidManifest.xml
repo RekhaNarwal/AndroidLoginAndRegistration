@@ -159,6 +159,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.socialpresencenetwork.phodo.TabsProfileFragmentActivity" />
         </activity>
+        <activity
+            android:name=".RecentPosts"
+            android:label="@string/title_activity_recent_posts"
+            android:parentActivityName=".ProfileActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.socialpresencenetwork.phodo.ProfileActivity" />
+        </activity>
     </application>
 
 </manifest>
