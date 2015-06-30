@@ -11,6 +11,4 @@
         android:paddingTop="15dip"
         android:id="@+id/searchView"
          />
-
-
 </RelativeLayout>

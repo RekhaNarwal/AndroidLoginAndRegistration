@@ -34,6 +34,7 @@ public class PostActivity extends Activity {
     String localimageName="";
     String encodedImage="";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
