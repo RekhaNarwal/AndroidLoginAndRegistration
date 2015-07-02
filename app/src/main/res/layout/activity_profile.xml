@@ -149,16 +149,13 @@
         </android.support.v4.view.ViewPager>
 
         <Button
-            style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Edit"
             android:id="@+id/bt_images"
             android:layout_alignParentTop="true"
-            android:layout_alignRight="@+id/header_imageview"
-            android:layout_alignEnd="@+id/header_imageview" />
-
-
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -166,6 +163,7 @@
             android:scaleType="centerCrop"
             android:id="@+id/iv_image"
             android:layout_below="@+id/bt_images" />
+
 
 
     </RelativeLayout>
