@@ -19,4 +19,6 @@
     <string name="title_activity_ranks">RanksActivity</string>
     <string name="title_activity_tabs_profile_fragment">TabsProfileFragmentActivity</string>
     <string name="title_activity_recent_posts">RecentPosts</string>
+    <string name="label_btn_find">Find</string>
+
 </resources>
