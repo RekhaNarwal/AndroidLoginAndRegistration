@@ -53,7 +53,24 @@ public class PostActivity extends Activity {
     {
     }
     private Uri getTempFile() {
-}
+
+        File root = new File(Environment.getExternalStorageDirectory(),"Samples");
+        if (!root.exists()) {
+            root.mkdirs();
+        }
+        final Calendar c = Calendar.getInstance();
+        int y = c.get(Calendar.YEAR);
+        int m = c.get(Calendar.MONTH);
+        int d = c.get(Calendar.DAY_OF_MONTH);
+        int h = c.get(Calendar.HOUR_OF_DAY);
+        int mi = c.get(Calendar.MINUTE);
+        String filename = "" + System.currentTimeMillis();
+        File file = new File(root, filename + ".jpeg");
+        Uri muri = Uri.fromFile(file);
+        selectedImagePath = muri.getPath();
+        Log.i("take picture path", selectedImagePath);
+        return muri;
+    }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         Log.i("ONACTIVYRESULT","Running Activity");
