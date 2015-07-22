@@ -51,61 +51,9 @@ public class PostActivity extends Activity {
 
     public void showDialog()
     {
-
-
-        final Dialog dialog = new Dialog(ctx);
-        dialog.setContentView(R.layout.image_share);
-        dialog.setTitle("Select Image");
-        LinearLayout fromcam=(LinearLayout)dialog.findViewById(R.id.fromcameraup);
-        LinearLayout fromfile=(LinearLayout)dialog.findViewById(R.id.fromfileup);
-        fromcam.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View arg0) {
-                // TODO Auto-generated method stub
-                Intent photoPickerIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                photoPickerIntent.putExtra(MediaStore.EXTRA_OUTPUT, getTempFile());
-                photoPickerIntent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
-                photoPickerIntent.putExtra("return-data", true);
-                dialog.dismiss();
-                startActivityForResult(photoPickerIntent,cameraData);
-            }
-        });
-        fromfile.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View arg0) {
-                // TODO Auto-generated method stub
-                Intent i = new Intent(
-                        Intent.ACTION_PICK,
-                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                dialog.dismiss();
-                startActivityForResult(i, RESULT_LOAD_IMAGE);
-            }
-        });
-
-        dialog.show();
-
     }
     private Uri getTempFile() {
-
-        File root = new File(Environment.getExternalStorageDirectory(),"Samples");
-        if (!root.exists()) {
-            root.mkdirs();
-        }
-        final Calendar c = Calendar.getInstance();
-        int y = c.get(Calendar.YEAR);
-        int m = c.get(Calendar.MONTH);
-        int d = c.get(Calendar.DAY_OF_MONTH);
-        int h = c.get(Calendar.HOUR_OF_DAY);
-        int mi = c.get(Calendar.MINUTE);
-        String filename = "" + System.currentTimeMillis();
-        File file = new File(root, filename + ".jpeg");
-        Uri muri = Uri.fromFile(file);
-        selectedImagePath = muri.getPath();
-        Log.i("take picture path", selectedImagePath);
-        return muri;
-    }
+}
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         Log.i("ONACTIVYRESULT","Running Activity");
